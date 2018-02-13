@@ -40,3 +40,8 @@
          template
          (spit filename))
     (browse/browse-url (url filename))))
+
+(defmacro infix
+ "Use this macro when you pine for the notation of your childhood"
+ [infixed]
+ (list (second infixed) (first infixed) (last infixed)))
