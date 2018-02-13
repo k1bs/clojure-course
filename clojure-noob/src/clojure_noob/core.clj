@@ -72,3 +72,14 @@
 (defn mapset
   [f coll]
   (set (map f coll)))
+
+(def character
+  {:name "Smooches McCutes"
+   :attributes {:intelligence 10
+                :strength 4
+                :dexterity 5}})
+(def c-int (comp :intelligence :attributes))
+(def c-str (comp :strength :attributes))
+(def c-dex (comp :dexterity :attributes))
+
+(defn attr [x] (comp (keyword x) :attributes))
